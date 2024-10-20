@@ -1,0 +1,26 @@
+
+{
+    "name": "Gmail Digest Extension",
+    "version": "1.0.0",
+    "manifest_version": 3,
+    "description": "Chrome extension to generate an email digest",
+    "permissions": ["identity", "storage"],
+    "oauth2": {
+      "client_id": "731125970077-5t4qchckfvibdahs4rsm5to7494lalgk.apps.googleusercontent.com",
+      "scopes": [
+        "https://www.googleapis.com/auth/gmail.readonly"
+      ]
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "40": "assets/icon40.png",
+        "48": "assets/icon48.png",
+        "120": "assets/icon120.png"
+      }
+    }
+  }
+  

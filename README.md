@@ -1,5 +1,7 @@
 Cal Hacks 11.0 Project. A Google Chrome extension that digests and summarizes Gmail emails you received in a latest time period you specified. This tool helps you to grasp the important points from your most recent emails.
 
+[![Ezemail Demo](https://img.youtube.com/vi/MReFrbj4wGo/maxresdefault.jpg)](https://youtu.be/MReFrbj4wGo?si=88bX4ztZEgULOvfg)
+
 ## Prerequisites
 
 ### 1. Clone this repository

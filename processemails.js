@@ -1,5 +1,7 @@
 // processEmails.js
 
+import CONFIG from "./config";
+
 // Function to request emails from the background script
 function getEmails(days) {
     return new Promise((resolve, reject) => {
@@ -33,7 +35,6 @@ getEmails(7) // Fetch emails from the last 7 days; adjust as needed
     });
 
 // Your summarizeEmails function
-const OPENAI_API_KEY = 'your-openai-api-key'; // Replace with your actual API key
 const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
 
 async function summarizeEmails(emails) {
@@ -58,7 +59,7 @@ Date: ${email.date}
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': `Bearer ${OPENAI_API_KEY}`,
+                'Authorization': `Bearer ${CONFIG.OPENAI_API_KEY}`,
             },
             body: JSON.stringify(requestBody),
         });

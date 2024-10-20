@@ -11,6 +11,9 @@
         "https://www.googleapis.com/auth/gmail.readonly"
       ]
     },
+    "host_permissions": [
+      "https://gmail.googleapis.com/*"
+    ],
     "background": {
       "service_worker": "background.js"
     },

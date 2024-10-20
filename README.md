@@ -20,7 +20,7 @@ git clone <repository-url>
 4. Go to **Credentials** and create an OAuth client ID.
 5. Set the OAuth item ID to the ID of this extension (you can find it in the Chrome Extensions page).
 6. On the OAuth consent screen, include the scope `https://www.googleapis.com/auth/gmail.readonly`.
-7. Once completed, you will get a `Client ID`.
+7. Once completed, you will get a `Client ID`. Use it for the `"client_id"` in `manifest.json`.
 
 ### 4. Try the Extension
 Open the extension in Google Chrome and start using it to summarize your Gmail emails.

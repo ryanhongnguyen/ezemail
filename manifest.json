@@ -6,7 +6,7 @@
     "description": "Chrome extension to generate an email digest",
     "permissions": ["identity", "storage"],
     "oauth2": {
-      "client_id": "731125970077-5t4qchckfvibdahs4rsm5to7494lalgk.apps.googleusercontent.com",
+      "client_id": "606476731366-tqvc5q69abh2mlbcpbm0t1nqcbps4fm6.apps.googleusercontent.com",
       "scopes": [
         "https://www.googleapis.com/auth/gmail.readonly"
       ]

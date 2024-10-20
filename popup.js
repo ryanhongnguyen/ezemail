@@ -11,20 +11,20 @@ function displayEmails(emails) {
     emailResults.appendChild(emailDiv);
   });
 }
-
 // Utility function to escape HTML characters
 function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
   return div.innerHTML;
 }
-
 document.getElementById('fetchEmails').addEventListener('click', () => {
   const days = document.getElementById('days').value || '7'; // Default to 7 days
   document.getElementById('emailResults').textContent = 'Fetching emails...';
   chrome.runtime.sendMessage({ action: 'fetchEmails', days: days }, function(response) {
     if (response && response.emails) {
       displayEmails(response.emails);
+      summarizeEmails(response.emails).then(summary => {
+          console.log('Summary Email:\n', summary);});
       summarizeEmails(response.emails).then(summary => {
           console.log('Summary Email:\n', summary);});
     } else if (response && response.error) {

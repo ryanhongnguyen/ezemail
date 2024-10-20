@@ -26,7 +26,7 @@ if __name__ == '__main__':
     
     gmail = authenticate_gmail()
 
-    start_time = datetime(2024, 10, 10)
+    start_time = datetime(2024, 10, 16)
     end_time = datetime(2024, 10, 17)
 
     emails = fetch_emails(gmail, start_time, end_time)
@@ -35,5 +35,5 @@ if __name__ == '__main__':
         print(f"Subject: {email['subject']}")
         print(f"Sender: {email['sender']}")
         print(f"Date: {email['date']}")
-        print(f"Body: {email['body'][:100]}...")
+        print(f"Body: {email['body']}")
         print("-" * 50)

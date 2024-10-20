@@ -11,7 +11,6 @@ function displayEmails(emails) {
     emailResults.appendChild(emailDiv);
   });
 }
-
 function escapeHtml(text) {
   const div = document.createElement('div');
   div.textContent = text;
@@ -36,7 +35,6 @@ document.getElementById('fetchEmails').addEventListener('click', () => {
             console.error('Error fetching token:', chrome.runtime.lastError.message);
             return;
           }
-
           sendEmail(token, emailSubject, summary)
             .then(result => {
               console.log(result);
@@ -53,14 +51,11 @@ document.getElementById('fetchEmails').addEventListener('click', () => {
     }
   });  
 });
-
-const OPENAI_API_KEY = 'REPLACE';
+const OPENAI_API_KEY = "API_KEY";
 const OPENAI_API_URL = 'https://api.openai.com/v1/chat/completions';
-
 async function summarizeEmails(emails) {
     const prompt = `
 Help me summarize those emails in terms of the senders, some important information, and deadlines, like a comprehensive summary of it. Return it as a formated html stuff so I can present it nicer, like with bullet points stuff.
-
 Here are the emails:
 ${emails.map(email => `
 Subject: ${email.subject}
@@ -68,12 +63,10 @@ Sender: ${email.from}
 Body: ${email.body}
 `).join('\n')}
 `;
-
     const requestBody = {
         model: 'gpt-3.5-turbo', // or use 'gpt-4' if you wanna spend hella money
         messages: [{ role: 'user', content: prompt }],
     };
-
     try {
         const response = await fetch(OPENAI_API_URL, {
             method: 'POST',
@@ -83,21 +76,17 @@ Body: ${email.body}
             },
             body: JSON.stringify(requestBody),
         });
-
         if (!response.ok) {
             throw new Error(`Error: ${response.status} ${response.statusText}`);
         }
-
         const data = await response.json();
         const summary = data.choices[0].message.content.trim();
-        
         return summary;
     } catch (error) {
         console.error('Error fetching summary from OpenAI:', error);
         return null;
     }
 }
-
 function sendEmail(token, subject, body) {
   return new Promise((resolve, reject) => {
     const email = `

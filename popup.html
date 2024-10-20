@@ -3,12 +3,54 @@
 <head>
   <title>Email Analyzer</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 10px; width: 300px; }
-    label, input, button { display: block; margin: 5px 0; }
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #f9f9fb;
+      color: #333;
+      margin: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      font-size: 20px;
+      color: #6a0dad;
+      text-align: center;
+    }
+    label {
+      font-size: 14px;
+      color: #6a0dad;
+      margin-bottom: 5px;
+    }
+    input, button {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    input {
+      background-color: #f0e5ff;
+    }
+    button {
+      background-color: #c599ff;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #b07bff;
+    }
     #emailResults {
-      max-height: 400px;
+      max-height: 300px;
       overflow-y: auto;
       margin-top: 10px;
+      background-color: #fff0f5;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
     }
     pre {
       white-space: pre-wrap;

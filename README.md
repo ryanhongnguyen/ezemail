@@ -1,4 +1,4 @@
-Cal Hacks 11.0 Project. A Google Chrome extension that digests and summarizes Gmail emails you received in a latest time period you specified. This tool helps you to grasp the important points from your most recent emails.
+Ezemail is a Google Chrome extension created during Cal Hacks 11.0 that digests and summarizes recent Gmail emails based on a user-specified time range. It helps users quickly grasp the key points from their latest emails by leveraging the Gmail and OpenAi API for efficient summarization.
 
 [![Ezemail Demo](https://img.youtube.com/vi/MReFrbj4wGo/maxresdefault.jpg)](https://youtu.be/MReFrbj4wGo?si=88bX4ztZEgULOvfg)
 
